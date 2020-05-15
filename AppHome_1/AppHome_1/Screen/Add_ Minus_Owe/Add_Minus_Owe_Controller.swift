@@ -227,8 +227,14 @@ class Add_Minus_Owe_Controller: UIViewController
                     (UIApplication.shared.delegate as! AppDelegate).fireBaseRef.child("customer").child(self.data["name"] as! String).removeValue()
                     // then .. Insert
                     (UIApplication.shared.delegate as! AppDelegate).fireBaseRef.child("customer").child((self.data["name"] as? String)!).setValue(["name": self.data["name"] as? String, "address": self.data["address"] as? String, "date": self.data["date"] as? String, "note": self.data["note"] as? String, "phone": self.data["phone"] as? String, "totalowe": "\(sumOwe)"])
-                    self.navigationController?.popToRootViewController(animated: true)
-                    self.view.makeToast("Đã thêm !")
+                    let loading = self.displaySpinner(onView: self.view)
+                    self.view.makeToast("Đã Thêm")
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2)
+                    {
+                        self.removeSpinner(spinner: loading)
+                        self.navigationController?.popToRootViewController(animated: true)
+                    }
                     
                 case .cancel:
                     print("cancel")
@@ -301,8 +307,15 @@ class Add_Minus_Owe_Controller: UIViewController
                     (UIApplication.shared.delegate as! AppDelegate).fireBaseRef.child("customer").child(self.data["name"] as! String).removeValue()
                     // then .. Insert
                     (UIApplication.shared.delegate as! AppDelegate).fireBaseRef.child("customer").child((self.data["name"] as? String)!).setValue(["name": self.data["name"] as? String, "address": self.data["address"] as? String, "date": self.data["date"] as? String, "note": self.data["note"] as? String, "phone": self.data["phone"] as? String, "totalowe": "\(sumOwe)"])
-                    self.navigationController?.popToRootViewController(animated: true)
-                    self.view.makeToast("Đã trừ !")
+                    
+                    let loading = self.displaySpinner(onView: self.view)
+                    self.view.makeToast("Đã trừ")
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2)
+                    {
+                        self.removeSpinner(spinner: loading)
+                        self.navigationController?.popToRootViewController(animated: true)
+                    }
 
                 case .cancel:
                     print("cancel")

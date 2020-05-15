@@ -162,8 +162,15 @@ class AddNewOweController: UIViewController, checkTextField
                return
            }
         (UIApplication.shared.delegate as! AppDelegate).fireBaseRef.child("customer").child("\(name)").setValue(["name": name, "address": address, "date": date , "note": note, "phone": phone, "totalowe": owe])
-        self.navigationController?.popToRootViewController(animated: true)
-            
+        
+        let loading = displaySpinner(onView: view)
+        self.view.makeToast("Thêm Thành Công")
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2)
+        {
+            self.removeSpinner(spinner: loading)
+            self.navigationController?.popToRootViewController(animated: true)
+        }
        }
     
     

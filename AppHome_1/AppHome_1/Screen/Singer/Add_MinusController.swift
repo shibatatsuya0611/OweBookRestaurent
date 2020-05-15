@@ -199,6 +199,7 @@ class Add_MinusController: UIViewController
                            {
                                print("Search Customer to Delete_Owe")
                                let vc = InforOweController()
+                               vc.isCheckInfor = true
                                vc.title = self.title
                                vc.data = val
                                self.navigationController?.pushViewController(vc, animated: true)
