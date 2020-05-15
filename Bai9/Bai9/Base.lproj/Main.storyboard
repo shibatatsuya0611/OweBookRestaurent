@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bai9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTj-8O-Q3h" userLabel="Time">
+                                <rect key="frame" x="20" y="500" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3F-Z5-YHG" userLabel="Date">
+                                <rect key="frame" x="20" y="541" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vj6-bl-mOX">
+                                <rect key="frame" x="0.0" y="625" width="414" height="237"/>
+                                <connections>
+                                    <action selector="valueChangedWithSender:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="U9h-yj-RmK"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vj6-bl-mOX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="55z-RO-ICR"/>
+                            <constraint firstItem="XTj-8O-Q3h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="456" id="9g1-XY-Djn"/>
+                            <constraint firstItem="W3F-Z5-YHG" firstAttribute="top" secondItem="XTj-8O-Q3h" secondAttribute="bottom" constant="20" id="BzI-j2-gDX"/>
+                            <constraint firstItem="XTj-8O-Q3h" firstAttribute="leading" secondItem="W3F-Z5-YHG" secondAttribute="leading" id="KUE-YP-phS"/>
+                            <constraint firstItem="Vj6-bl-mOX" firstAttribute="top" secondItem="W3F-Z5-YHG" secondAttribute="bottom" constant="63" id="N49-q9-zXU"/>
+                            <constraint firstItem="Vj6-bl-mOX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RaS-x4-mmx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XTj-8O-Q3h" secondAttribute="trailing" symbolic="YES" id="cDd-Ip-fBt"/>
+                            <constraint firstItem="Vj6-bl-mOX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gBe-QH-dLw"/>
+                            <constraint firstItem="W3F-Z5-YHG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lSp-64-Qun"/>
+                            <constraint firstItem="XTj-8O-Q3h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sXM-nU-tx8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="W3F-Z5-YHG" secondAttribute="trailing" symbolic="YES" id="uhu-hu-Sg8"/>
+                            <constraint firstItem="W3F-Z5-YHG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="x9t-Hc-fNk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="Vj6-bl-mOX" id="fvf-g5-RfM"/>
+                        <outlet property="lblDate" destination="W3F-Z5-YHG" id="Gfw-Qk-ZfB"/>
+                        <outlet property="lblTime" destination="XTj-8O-Q3h" id="Kis-iY-Exh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>

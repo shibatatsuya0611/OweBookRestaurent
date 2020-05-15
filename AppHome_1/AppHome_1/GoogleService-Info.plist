@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>25746665470-mspopmms1cuin099ia8j90kia1spoofs.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.25746665470-mspopmms1cuin099ia8j90kia1spoofs</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBtZN6DbsJcz3J1LIbevQanDQDItEP1y1o</string>
+	<key>GCM_SENDER_ID</key>
+	<string>25746665470</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hackingwithswift.AppHome-1</string>
+	<key>PROJECT_ID</key>
+	<string>owe-book</string>
+	<key>STORAGE_BUCKET</key>
+	<string>owe-book.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:25746665470:ios:02b717d45e6ba8f2bd5aaf</string>
+	<key>DATABASE_URL</key>
+	<string>https://owe-book.firebaseio.com</string>
+</dict>
+</plist>

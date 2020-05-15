@@ -1,0 +1,6 @@
+framework module Pods_Bai16 {
+  umbrella header "Pods-Bai16-umbrella.h"
+
+  export *
+  module * { export * }
+}

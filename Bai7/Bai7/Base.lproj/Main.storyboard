@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bai7" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7G-ih-tXx">
+                                <rect key="frame" x="10" y="629.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EK9-Mh-kdx">
+                                <rect key="frame" x="0.0" y="670" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="L3e-JU-QfZ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9Hj-6Z-i17"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EK9-Mh-kdx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Sr-ox-4qj"/>
+                            <constraint firstItem="EK9-Mh-kdx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4n0-Bv-ZF6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="I7G-ih-tXx" secondAttribute="trailing" symbolic="YES" id="AFf-tK-g3E"/>
+                            <constraint firstItem="EK9-Mh-kdx" firstAttribute="top" secondItem="I7G-ih-tXx" secondAttribute="bottom" constant="20" id="FYs-2v-oGG"/>
+                            <constraint firstItem="I7G-ih-tXx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="RWr-pk-Ji5"/>
+                            <constraint firstAttribute="bottom" secondItem="EK9-Mh-kdx" secondAttribute="bottom" constant="10" id="Vn9-La-tLF"/>
+                            <constraint firstItem="EK9-Mh-kdx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="g6n-jl-Yxt"/>
+                            <constraint firstItem="EK9-Mh-kdx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zxk-qO-6rd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblSelectedItem" destination="I7G-ih-tXx" id="LgK-g2-kcd"/>
+                        <outlet property="pickerView" destination="EK9-Mh-kdx" id="Ill-XS-52x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+</document>
